@@ -32,6 +32,9 @@ convert_transcriptID <- function(dat, db, biomart_ens="ensembl", dat_ens="hsapie
 
   #read data
   dat<-as.data.frame(dat)
+  dat$CDS_start_loc <- NA
+  dat$ref <- NA
+  dat$alt <- NA
 
   #preprocess data
   str<-as.array(dat$Nucleotide_changes)
